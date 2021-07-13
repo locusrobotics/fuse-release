@@ -1,0 +1,63 @@
+ros-melodic-fuse (0.4.1-1bionic) bionic; urgency=high
+
+  * Add support for sphinx documentation (#228 <https://github.com/locusrobotics/fuse/issues/228>)
+    * Adding tutorial for basic configuration
+  * Add fuse_viz pkg with rviz SerializedGraph display (#99 <https://github.com/locusrobotics/fuse/issues/99>)
+  * [RST-2340] Add serialization support to fuse (#98 <https://github.com/locusrobotics/fuse/issues/98>)
+  * Renaming package to fuse_models
+  * Contributors: Enrique Fernandez Perdomo, Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 12 Jul 2021 23:00:00 -0000
+
+ros-melodic-fuse (0.4.0-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Thu, 11 Jul 2019 23:00:00 -0000
+
+ros-melodic-fuse (0.3.0-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 18 Mar 2019 00:00:00 -0000
+
+ros-melodic-fuse (0.2.0-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 16 Jan 2019 00:00:00 -0000
+
+ros-melodic-fuse (0.1.1-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Tue, 14 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse (0.1.0-1bionic) bionic; urgency=high
+
+  * [RST-1121] move optimizers (#25 <https://github.com/locusrobotics/fuse/issues/25>)
+    * Added fuse_optimizers to the metapackage depends
+  * [RST-1121] Moved the pose publishers (#19 <https://github.com/locusrobotics/fuse/issues/19>)
+    * Added fuse_publishers to the metapackage
+  * [RST-1121] Moved the Graph classes (#15 <https://github.com/locusrobotics/fuse/issues/15>)
+    * Added fuse_graphs to the metapackage
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sat, 11 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse (0.0.2-1bionic) bionic; urgency=high
+
+  * Added absolute and relative constraints (#8 <https://github.com/locusrobotics/fuse/issues/8>)
+  * Move the fuse_variables package into the public repo (#4 <https://github.com/locusrobotics/fuse/issues/4>)
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sun, 15 Jul 2018 23:00:00 -0000
+
+ros-melodic-fuse (0.0.1-1bionic) bionic; urgency=high
+
+  * Moved the Variable and Constraint classes into the public fuse repo
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 04 Jul 2018 23:00:00 -0000
+
+
