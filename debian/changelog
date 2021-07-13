@@ -1,0 +1,144 @@
+ros-melodic-fuse-constraints (0.4.1-1bionic) bionic; urgency=high
+
+  * Use analytic relative pose 2d cost function (#193 <https://github.com/locusrobotics/fuse/issues/193>)
+    * Use analytic relative pose 2d cost function
+    * Add analytic NormalDeltaPose2D cost function
+    * Use analytic NormalDeltaPose2D cost function in
+    RelativePose2DStampedConstraint
+    * Test NormalDeltaPose2D jacobians are correct, comparing against
+    NormalDeltaPose2DCostFunctor using automatic differentiation
+    * Benchmark NormalDeltaPose2D vs NormalDeltaPose2DCostFunctor using
+    automatic differentiation for 1, 2 and 3 residuals. The latency
+    speedup is approximately 1.35, 1.49 and 1.55, respectively.
+  * Use analytic absolute pose 2d cost function (#192 <https://github.com/locusrobotics/fuse/issues/192>)
+    * Add analytic NormalPriorPose2D cost function
+    * Use analytic NormalPriorPose2D cost function in
+    AbsolutePose2DStampedConstraint
+    * Test NormalPriorPose2D jacobians are correct, comparing against
+    NormalPriorPose2DCostFunctor using automatic differentiation
+    * Benchmark NormalPriorPose2D vs NormalPriorPose2DCostFunctor using
+    automatic differentiation for 1, 2 and 3 residuals. The latency
+    speedup is approximately 2.36, 2.76 and 3.44, respectively.
+  * Fix roslint 0.12.0 (#186 <https://github.com/locusrobotics/fuse/issues/186>)
+    * Fix roslint 0.12.0 include_what_you_use warnings
+    Mostly for:
+    * std::move -> #include <utility>
+    * std::make_shared and similar -> #include <memory>
+    * Remove static string variable not permitted by roslint 0.12.0, using a test fixture where needed.
+  * Fix Unicycle2DIgnition set_pose (#154 <https://github.com/locusrobotics/fuse/issues/154>)
+    * Initialize StateHistoryElement::velocity_yaw
+    * Process ignition transactions individually
+    * Call motion model generator with last stamp
+    * Skip optimization cycle if transaction is empty
+  * Fix compute elimination order with orphan variables (#136 <https://github.com/locusrobotics/fuse/issues/136>)
+    * Test computeEliminationOrder with orphan variables
+    * Fix computeEliminationOrder with orphan variables
+  * Fix get constraints with lvalue iterator input (#134 <https://github.com/locusrobotics/fuse/issues/134>)
+    * Change getConstraints signature to return iterator
+    * Update marginalize code to fix the previous usage error
+  * Support printing VariableConstraints objects (#132 <https://github.com/locusrobotics/fuse/issues/132>)
+  * Add fuse_loss pkg with plugin-based loss functions (#118 <https://github.com/locusrobotics/fuse/issues/118>)
+  * Removed the explicit '-std=c++14' compile flag (#119 <https://github.com/locusrobotics/fuse/issues/119>)
+    * Removed the explicit '-std=c++14' compile flag
+    * Changed the CXX_STANDARD setting to be per-target instead of global
+    * Added the CXX_STANDARD_REQUIRED setting to all targets
+  * Revert "Fix build with ceres 2.0 with CMake < 3.8 (#106 <https://github.com/locusrobotics/fuse/issues/106>)" (#120 <https://github.com/locusrobotics/fuse/issues/120>)
+    This reverts commit 9933456ecc24ba9b649a8a2885be3f852306efee.
+  * Wrap normal delta pose 2d orientation angle error (#122 <https://github.com/locusrobotics/fuse/issues/122>)
+  * fix compilation in Kinetic (#112 <https://github.com/locusrobotics/fuse/issues/112>)
+  * Support empty linear terms in marginalizeNext (#111 <https://github.com/locusrobotics/fuse/issues/111>)
+    * Enforce constness
+    * Unshadow variable_uuid in inner for loop
+    * Support empty linear terms in marginalizeNext
+  * Fix build with ceres 2.0 with CMake < 3.8 (#106 <https://github.com/locusrobotics/fuse/issues/106>)
+    * Note that while the Ceres 2.0 build completes, there may still be some lingering issues.
+  * [RST-1951] speed optimizations (#100 <https://github.com/locusrobotics/fuse/issues/100>)
+    * Improved random UUID generator
+    * Minor Eigen assignment speed improvements
+  * [RST-2427] Added a 'source' field to the constraints. This is an API-breaking change. (#101 <https://github.com/locusrobotics/fuse/issues/101>)
+  * [RST-2340] Add serialization support to fuse (#98 <https://github.com/locusrobotics/fuse/issues/98>)
+  * Fix -Wall -Wextra warnings in tests (#80 <https://github.com/locusrobotics/fuse/issues/80>)
+  * Fix -Wall -Wextra warnings (#77 <https://github.com/locusrobotics/fuse/issues/77>)
+  * Contributors: Davide Faconti, Enrique Fernandez Perdomo, Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 12 Jul 2021 23:00:00 -0000
+
+ros-melodic-fuse-constraints (0.4.0-1bionic) bionic; urgency=high
+
+  * Depend on libceres-dev instead of ceres-solver (#71 <https://github.com/locusrobotics/fuse/issues/71>)
+  * [RST-2144] Support proper Eigen memory alignment (#65 <https://github.com/locusrobotics/fuse/issues/65>)
+  * [RST-2088] Fix bug causing bad marginal computations occasionally (#60 <https://github.com/locusrobotics/fuse/issues/60>)
+  * [RST-1747] fixed lag smoother implementation (#52 <https://github.com/locusrobotics/fuse/issues/52>)
+  * Modified Variable class to make the UUID immutable (#55 <https://github.com/locusrobotics/fuse/issues/55>)
+  * RST-2025 Fixing size issues (#53 <https://github.com/locusrobotics/fuse/issues/53>)
+    * Fixing size issue with 2D poses
+    * Fixed the size check in MarginalConstraint (#54 <https://github.com/locusrobotics/fuse/issues/54>)
+  * [RST-1745] Added a marginalizeVariables() function (#48 <https://github.com/locusrobotics/fuse/issues/48>)
+  * [RST-1745] Created a container to hold the list of constraints by variable (#47 <https://github.com/locusrobotics/fuse/issues/47>)
+  * [RST-1745] Created a uuid<-->index bidirectional lookup class (#46 <https://github.com/locusrobotics/fuse/issues/46>)
+  * [RST-1744] Added a marginal constraint class (#43 <https://github.com/locusrobotics/fuse/issues/43>)
+  * [RST-1940] Added a localSize() method to the Variable class (#42 <https://github.com/locusrobotics/fuse/issues/42>)
+  * [RST-1927] Update the local parameterization for the orientation variables (#41 <https://github.com/locusrobotics/fuse/issues/41>)
+  * [RST-1926] Extend the local parameter definition to include Minus() (#40 <https://github.com/locusrobotics/fuse/issues/40>)
+  * Contributors: Enrique Fernández Perdomo, Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Thu, 11 Jul 2019 23:00:00 -0000
+
+ros-melodic-fuse-constraints (0.3.0-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 18 Mar 2019 00:00:00 -0000
+
+ros-melodic-fuse-constraints (0.2.0-1bionic) bionic; urgency=high
+
+  * [RST-1567] Check the system has started before attempting to optimize (#33 <https://github.com/locusrobotics/fuse/issues/33>)
+    * Check the system has started before attempting to optimize.
+    * Fixed linter issues
+  * RST-1559 Adding partial measurement support for relative 2D pose data (#32 <https://github.com/locusrobotics/fuse/issues/32>)
+    * Adding partial measurement support for relative 2D pose data
+  * Adding subset measurement support for AbsolutePose2DStampedConstraint (#31 <https://github.com/locusrobotics/fuse/issues/31>)
+    * Adding subset measurement support
+  * [RST-1554] test depends (#30 <https://github.com/locusrobotics/fuse/issues/30>)
+    * Refactored all CMakeLists.txt to avoid path issues when using workspace overlays
+  * RST-1239 Adding 3D relative pose constraint (#27 <https://github.com/locusrobotics/fuse/issues/27>)
+    * Adding 3D relative pose constraint
+    * Updating expected covariance matrices for anything involving rotations
+  * Contributors: Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 16 Jan 2019 00:00:00 -0000
+
+ros-melodic-fuse-constraints (0.1.1-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Tue, 14 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse-constraints (0.1.0-1bionic) bionic; urgency=high
+
+  * [RST-1121] Moved the pose publishers (#19 <https://github.com/locusrobotics/fuse/issues/19>)
+    * Clean up Eigen depends and includes
+  * Adding absolute 3d pose
+  * Fixing quaternion delta computation
+  * Converted all Eigen objects to use row-major order (#22 <https://github.com/locusrobotics/fuse/issues/22>)
+  * Fixed covariance matrix size (#21 <https://github.com/locusrobotics/fuse/issues/21>)
+  * Adding 3D orientation constraints
+  * Contributors: Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sat, 11 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse-constraints (0.0.2-1bionic) bionic; urgency=high
+
+  * fixed cut&paste error (#13 <https://github.com/locusrobotics/fuse/issues/13>)
+  * Added absolute and relative 2D constraints (#8 <https://github.com/locusrobotics/fuse/issues/8>)
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sun, 15 Jul 2018 23:00:00 -0000
+
+ros-melodic-fuse-constraints (0.0.1-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 04 Jul 2018 23:00:00 -0000
+
+
