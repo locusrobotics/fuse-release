@@ -1,0 +1,12 @@
+Source: ros-melodic-fuse-graphs
+Section: misc
+Priority: optional
+Maintainer: Stephen Williams <swilliams@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), libbenchmark-dev, libceres-dev, ros-melodic-catkin, ros-melodic-fuse-core, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-roslint, ros-melodic-rostest
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-fuse-graphs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libceres-dev, ros-melodic-fuse-core, ros-melodic-pluginlib, ros-melodic-roscpp
+Description: The fuse_graphs package provides some concrete implementations of the fuse_core::Graph interface.
