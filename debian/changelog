@@ -1,0 +1,76 @@
+ros-melodic-fuse-variables (0.4.1-1bionic) bionic; urgency=high
+
+  * Removed the explicit '-std=c++14' compile flag (#119 <https://github.com/locusrobotics/fuse/issues/119>)
+    * Removed the explicit '-std=c++14' compile flag
+    * Changed the CXX_STANDARD setting to be per-target instead of global
+    * Added the CXX_STANDARD_REQUIRED setting to all targets
+  * fix compilation in Kinetic (#112 <https://github.com/locusrobotics/fuse/issues/112>)
+  * [RST-2340] Add serialization support to fuse (#98 <https://github.com/locusrobotics/fuse/issues/98>)
+  * Fix -Wall -Wextra warnings in tests (#80 <https://github.com/locusrobotics/fuse/issues/80>)
+  * Fix -Wall -Wextra warnings (#77 <https://github.com/locusrobotics/fuse/issues/77>)
+  * Contributors: Davide Faconti, Enrique Fernandez Perdomo, Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 12 Jul 2021 23:00:00 -0000
+
+ros-melodic-fuse-variables (0.4.0-1bionic) bionic; urgency=high
+
+  * Depend on libceres-dev instead of ceres-solver (#71 <https://github.com/locusrobotics/fuse/issues/71>)
+  * Modified Variable class to make the UUID immutable (#55 <https://github.com/locusrobotics/fuse/issues/55>)
+  * The node handle in the loadDeviceId() function does not need to be mutable (#56 <https://github.com/locusrobotics/fuse/issues/56>)
+  * Fixed missing header. It was moved to a different package. (#49 <https://github.com/locusrobotics/fuse/issues/49>)
+  * [RST-1940] Added a localSize() method to the Variable class (#42 <https://github.com/locusrobotics/fuse/issues/42>)
+  * [RST-1927] Update the local parameterization for the orientation variables (#41 <https://github.com/locusrobotics/fuse/issues/41>)
+  * [RST-1926] Extend the local parameter definition to include Minus() (#40 <https://github.com/locusrobotics/fuse/issues/40>)
+  * Contributors: Enrique Fernández Perdomo, Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Thu, 11 Jul 2019 23:00:00 -0000
+
+ros-melodic-fuse-variables (0.3.0-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Mon, 18 Mar 2019 00:00:00 -0000
+
+ros-melodic-fuse-variables (0.2.0-1bionic) bionic; urgency=high
+
+  * [RST-1554] test depends (#30 <https://github.com/locusrobotics/fuse/issues/30>)
+    * Refactored all CMakeLists.txt to avoid path issues when using workspace overlays
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 16 Jan 2019 00:00:00 -0000
+
+ros-melodic-fuse-variables (0.1.1-1bionic) bionic; urgency=high
+
+  * [RST-1121] Load device id from parameter server (#26 <https://github.com/locusrobotics/fuse/issues/26>)
+    * Made a load function for getting the device id from the parameter server
+  * Contributors: Stephen Williams
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Tue, 14 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse-variables (0.1.0-1bionic) bionic; urgency=high
+
+  * [RST-1121] move optimizers (#25 <https://github.com/locusrobotics/fuse/issues/25>)
+  * [RST-1121] Moved the pose publishers (#19 <https://github.com/locusrobotics/fuse/issues/19>)
+  * Adding absolute 3d pose
+  * Adding 3D orientation constraints
+  * Contributors: Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sat, 11 Aug 2018 23:00:00 -0000
+
+ros-melodic-fuse-variables (0.0.2-1bionic) bionic; urgency=high
+
+  * Added a base class for all stamped variables (#14 <https://github.com/locusrobotics/fuse/issues/14>)
+  * Added 3D variable types
+  * Removed fuse_variables default constructors (#5 <https://github.com/locusrobotics/fuse/issues/5>)
+  * Move the fuse_variables package into the public repo (#4 <https://github.com/locusrobotics/fuse/issues/4>)
+  * Contributors: Stephen Williams, Tom Moore
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Sun, 15 Jul 2018 23:00:00 -0000
+
+ros-melodic-fuse-variables (0.0.1-1bionic) bionic; urgency=high
+
+
+
+ -- Stephen Williams <swilliams@locusrobotics.com>  Wed, 04 Jul 2018 23:00:00 -0000
+
+
