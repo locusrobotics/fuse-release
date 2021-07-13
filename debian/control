@@ -1,0 +1,12 @@
+Source: ros-melodic-fuse-msgs
+Section: misc
+Priority: optional
+Maintainer: Stephen Williams <swilliams@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-message-generation, ros-melodic-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-fuse-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-message-runtime, ros-melodic-std-msgs
+Description: The fuse_msgs package contains messages capable of holding serialized fuse objects
