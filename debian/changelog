@@ -1,0 +1,117 @@
+ros-noetic-fuse-viz (0.4.1-1buster) buster; urgency=high
+
+  * Changelogs
+  * Adding QT5 dependency in package.xml (#229 <https://github.com/locusrobotics/fuse/issues/229>)
+    * Adding QT5 dependency in package.xml
+    * Fixing viz build issues in noetic (#230 <https://github.com/locusrobotics/fuse/issues/230>)
+  * Fixed compile error when using the latest version of rviz (#220 <https://github.com/locusrobotics/fuse/issues/220>)
+  * Fix roslint 0.12.0 (#186 <https://github.com/locusrobotics/fuse/issues/186>)
+    * Fix roslint 0.12.0 include_what_you_use warnings
+    Mostly for:
+    * std::move -> #include <utility>
+    * std::make_shared and similar -> #include <memory>
+    * Remove static string variable not permitted by roslint 0.12.0, using a test fixture where needed.
+  * Replace ignition_sensors list param with ignition field (#163 <https://github.com/locusrobotics/fuse/issues/163>)
+    * Remove ignition_sensors param and use a per-sensor ignition field
+  * Keep constraint properties sorted by source (#161 <https://github.com/locusrobotics/fuse/issues/161>)
+  * Visualize loss (#144 <https://github.com/locusrobotics/fuse/issues/144>)
+    * Visualize error scaled by loss cost factor
+    If a constraint has a loss function, the cost is computed with and
+    without loss, and the quotient of the cost with loss by the cost without
+    loss is used to scale the error line. This is used to draw a "loss"
+    error line, so we can see the contribution of the loss function to the
+    constraint.
+  * Set QT_INCLUDE_DIRS and QT_LIBRARIES properly (#153 <https://github.com/locusrobotics/fuse/issues/153>)
+  * Removed the explicit '-std=c++14' compile flag (#119 <https://github.com/locusrobotics/fuse/issues/119>)
+    * Removed the explicit '-std=c++14' compile flag
+    * Changed the CXX_STANDARD setting to be per-target instead of global
+    * Added the CXX_STANDARD_REQUIRED setting to all targets
+  * Draw RelativePose2DStampedConstraint constraints (#107 <https://github.com/locusrobotics/fuse/issues/107>)
+    * Draw RelativePose2DStampedConstraint constraints
+    * Dynamically generate display properties for the constraint sources
+    * Cache the constraint sources properties config so it's applied when
+    the properties are later created
+    * Create Variable visual + property, as we do for the Constraint
+  * fix compilation in Kinetic (#112 <https://github.com/locusrobotics/fuse/issues/112>)
+  * Add fuse_viz pkg with rviz SerializedGraph display (#99 <https://github.com/locusrobotics/fuse/issues/99>)
+  * Contributors: Davide Faconti, Enrique Fernandez Perdomo, Stephen Williams, Tom Moore
+  * Adding QT5 dependency in package.xml (#229 <https://github.com/locusrobotics/fuse/issues/229>)
+    * Adding QT5 dependency in package.xml
+    * Fixing viz build issues in noetic (#230 <https://github.com/locusrobotics/fuse/issues/230>)
+  * Fixed compile error when using the latest version of rviz (#220 <https://github.com/locusrobotics/fuse/issues/220>)
+  * Fix roslint 0.12.0 (#186 <https://github.com/locusrobotics/fuse/issues/186>)
+    * Fix roslint 0.12.0 include_what_you_use warnings
+    Mostly for:
+    * std::move -> #include <utility>
+    * std::make_shared and similar -> #include <memory>
+    * Remove static string variable not permitted by roslint 0.12.0, using a test fixture where needed.
+  * Replace ignition_sensors list param with ignition field (#163 <https://github.com/locusrobotics/fuse/issues/163>)
+    * Remove ignition_sensors param and use a per-sensor ignition field
+  * Keep constraint properties sorted by source (#161 <https://github.com/locusrobotics/fuse/issues/161>)
+  * Visualize loss (#144 <https://github.com/locusrobotics/fuse/issues/144>)
+    * Visualize error scaled by loss cost factor
+    If a constraint has a loss function, the cost is computed with and
+    without loss, and the quotient of the cost with loss by the cost without
+    loss is used to scale the error line. This is used to draw a "loss"
+    error line, so we can see the contribution of the loss function to the
+    constraint.
+  * Set QT_INCLUDE_DIRS and QT_LIBRARIES properly (#153 <https://github.com/locusrobotics/fuse/issues/153>)
+  * Removed the explicit '-std=c++14' compile flag (#119 <https://github.com/locusrobotics/fuse/issues/119>)
+    * Removed the explicit '-std=c++14' compile flag
+    * Changed the CXX_STANDARD setting to be per-target instead of global
+    * Added the CXX_STANDARD_REQUIRED setting to all targets
+  * Draw RelativePose2DStampedConstraint constraints (#107 <https://github.com/locusrobotics/fuse/issues/107>)
+    * Draw RelativePose2DStampedConstraint constraints
+    * Dynamically generate display properties for the constraint sources
+    * Cache the constraint sources properties config so it's applied when
+    the properties are later created
+    * Create Variable visual + property, as we do for the Constraint
+  * fix compilation in Kinetic (#112 <https://github.com/locusrobotics/fuse/issues/112>)
+  * Add fuse_viz pkg with rviz SerializedGraph display (#99 <https://github.com/locusrobotics/fuse/issues/99>)
+  * Contributors: Davide Faconti, Enrique Fernandez Perdomo, Stephen Williams, Tom Moore
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Mon, 12 Jul 2021 23:00:00 -0000
+
+ros-noetic-fuse-viz (0.4.0-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Thu, 11 Jul 2019 23:00:00 -0000
+
+ros-noetic-fuse-viz (0.3.0-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Mon, 18 Mar 2019 00:00:00 -0000
+
+ros-noetic-fuse-viz (0.2.0-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Wed, 16 Jan 2019 00:00:00 -0000
+
+ros-noetic-fuse-viz (0.1.1-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Tue, 14 Aug 2018 23:00:00 -0000
+
+ros-noetic-fuse-viz (0.1.0-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Sat, 11 Aug 2018 23:00:00 -0000
+
+ros-noetic-fuse-viz (0.0.2-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Sun, 15 Jul 2018 23:00:00 -0000
+
+ros-noetic-fuse-viz (0.0.1-1buster) buster; urgency=high
+
+
+
+ -- Enrique Fernandez <efernandez@clearpath.ai>  Wed, 04 Jul 2018 23:00:00 -0000
+
+
