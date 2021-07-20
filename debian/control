@@ -1,0 +1,12 @@
+Source: ros-melodic-fuse
+Section: misc
+Priority: optional
+Maintainer: Stephen Williams <swilliams@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-fuse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-fuse-constraints, ros-melodic-fuse-core, ros-melodic-fuse-doc, ros-melodic-fuse-graphs, ros-melodic-fuse-models, ros-melodic-fuse-msgs, ros-melodic-fuse-optimizers, ros-melodic-fuse-publishers, ros-melodic-fuse-variables, ros-melodic-fuse-viz
+Description: The fuse metapackage
