@@ -1,0 +1,25 @@
+From e7dcdfa4b85fc8d4fe2f79f963b5d19116366ddf Mon Sep 17 00:00:00 2001
+From: Tom Moore <tmoore@locusrobotics.com>
+Date: Wed, 14 Jul 2021 08:13:57 +0100
+Subject: [PATCH] O3 opt-in
+
+---
+ debian/rules.em | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 1c02dd4..abc62d2 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -16,7 +16,7 @@ export LDFLAGS=
+ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
+ # Explicitly enable -DNDEBUG, see:
+ # 	https://github.com/ros-infrastructure/bloom/issues/327
+-export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
++export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG -O3
+ 
+ %:
+ 	dh $@@ -v --buildsystem=cmake
+-- 
+2.25.1
+
