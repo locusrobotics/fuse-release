@@ -1,0 +1,13 @@
+Source: ros-melodic-fuse-optimizers
+Section: misc
+Priority: optional
+Maintainer: Stephen Williams <swilliams@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-diagnostic-updater, ros-melodic-fuse-constraints, ros-melodic-fuse-core, ros-melodic-fuse-graphs, ros-melodic-fuse-models, ros-melodic-fuse-variables, ros-melodic-geometry-msgs, ros-melodic-nav-msgs, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-roslint, ros-melodic-rostest, ros-melodic-std-srvs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-fuse-optimizers
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-diagnostic-updater, ros-melodic-fuse-constraints, ros-melodic-fuse-core, ros-melodic-fuse-graphs, ros-melodic-fuse-variables, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-std-srvs
+Description: The fuse_optimizers package provides a set of optimizer implementations.
+ An optimizer is the object responsible for coordinating the sensors and motion model inputs, computing the optimal state values, and providing access to to the optimal state via the publishers.
