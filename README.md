@@ -1,3 +1,38 @@
+## fuse (melodic) - 0.4.2-1
+
+The packages in the `fuse` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -t melodic -r melodic fuse` on `Tue, 20 Jul 2021 16:59:58 -0000`
+
+These packages were released:
+- `fuse`
+- `fuse_constraints`
+- `fuse_core`
+- `fuse_doc`
+- `fuse_graphs`
+- `fuse_loss`
+- `fuse_models`
+- `fuse_msgs`
+- `fuse_optimizers`
+- `fuse_publishers`
+- `fuse_variables`
+- `fuse_viz`
+
+Version of package(s) in repository `fuse`:
+
+- upstream repository: https://github.com/locusrobotics/fuse.git
+- release repository: https://github.com/locusrobotics/fuse-release.git
+- rosdistro version: `0.4.1-2`
+- old version: `0.4.1-2`
+- new version: `0.4.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## fuse (noetic) - 0.4.1-1
 
 The packages in the `fuse` repository were released into the `noetic` distro by running `/usr/bin/bloom-release fuse -t noetic -r noetic --edit` on `Wed, 14 Jul 2021 07:00:50 -0000`
