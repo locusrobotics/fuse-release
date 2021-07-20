@@ -1,0 +1,12 @@
+Source: ros-noetic-fuse-models
+Section: misc
+Priority: optional
+Maintainer: Tom Moore <tmoore@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), libbenchmark-dev, libboost-all-dev, libceres-dev, libeigen3-dev, ros-noetic-catkin, ros-noetic-fuse-constraints, ros-noetic-fuse-core, ros-noetic-fuse-graphs, ros-noetic-fuse-msgs, ros-noetic-fuse-publishers, ros-noetic-fuse-variables, ros-noetic-geometry-msgs, ros-noetic-message-generation, ros-noetic-nav-msgs, ros-noetic-pluginlib, ros-noetic-roscpp, ros-noetic-roslint, ros-noetic-rostest, ros-noetic-sensor-msgs, ros-noetic-std-srvs, ros-noetic-tf2, ros-noetic-tf2-2d, ros-noetic-tf2-geometry-msgs, ros-noetic-tf2-ros
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-fuse-models
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, libceres-dev, libeigen3-dev, ros-noetic-fuse-constraints, ros-noetic-fuse-core, ros-noetic-fuse-graphs, ros-noetic-fuse-msgs, ros-noetic-fuse-publishers, ros-noetic-fuse-variables, ros-noetic-geometry-msgs, ros-noetic-message-runtime, ros-noetic-nav-msgs, ros-noetic-pluginlib, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-std-srvs, ros-noetic-tf2, ros-noetic-tf2-2d, ros-noetic-tf2-geometry-msgs, ros-noetic-tf2-ros
+Description: fuse plugins that implement various kinematic and sensor models
