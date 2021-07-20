@@ -1,4 +1,4 @@
-From b76ac70decf40fab05294c43f92503c6fc4d58ee Mon Sep 17 00:00:00 2001
+From 0fa3a38276a65477f55f8894e61793772f7b9264 Mon Sep 17 00:00:00 2001
 From: Tom Moore <tmoore@locusrobotics.com>
 Date: Wed, 14 Jul 2021 08:19:42 +0100
 Subject: [PATCH] O3 opt-in
