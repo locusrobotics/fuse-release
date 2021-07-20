@@ -1,0 +1,12 @@
+Source: ros-noetic-fuse
+Section: misc
+Priority: optional
+Maintainer: Stephen Williams <swilliams@locusrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-fuse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-fuse-constraints, ros-noetic-fuse-core, ros-noetic-fuse-doc, ros-noetic-fuse-graphs, ros-noetic-fuse-models, ros-noetic-fuse-msgs, ros-noetic-fuse-optimizers, ros-noetic-fuse-publishers, ros-noetic-fuse-variables, ros-noetic-fuse-viz
+Description: The fuse metapackage
